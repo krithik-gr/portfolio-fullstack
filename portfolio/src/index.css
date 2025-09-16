@@ -1,0 +1,104 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Light Theme */
+body.light {
+  background: linear-gradient(to bottom, #f9f9ff, #f5f9ff);
+  color: #0a2540;
+}
+
+/* Dark Theme */
+body.dark {
+  background: #0a2540;
+  color: #f5f9ff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #0056ff;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .menu-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: block;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 250px;
+  height: 100vh;
+  background: #1a1a2e;
+  color: white;
+  padding: 2rem 1.5rem;
+  transition: left 0.3s ease;
+  z-index: 1200;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar a {
+  display: block;
+  margin: 1.2rem 0;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.sidebar a:hover {
+  color: #6a5acd;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Tech Stack Cards */
+.tech-card {
+  text-align: center;
+  padding: 16px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+body.dark .tech-card {
+  background: #1e1e2f;
+  color: #f5f5f5;
+}
+
+.tech-card:hover {
+  transform: translateY(-6px);
+}
+
+.tech-card div {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
